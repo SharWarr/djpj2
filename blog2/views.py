@@ -12,7 +12,10 @@ posts = [
 
 
 def home (request):
-    return render(request, 'blog2/home.html' )
+    context = {
+    'posts' : posts
+    }
+    return render(request, 'blog2/home.html' , context)
 
 def about (request):
     return render(request, 'blog2/about.html')
